@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  cdm.web:
+    image: ${DOCKER_REGISTRY-}cdmweb
+    build:
+      context: .
+      dockerfile: Dockerfile
