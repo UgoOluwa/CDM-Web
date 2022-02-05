@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Caleb Dada Ministries" name="keywords">
+    <meta content="Caleb Dada Ministries" name="description">
+    <title>@ViewData["Title"] - CDM.WEB</title>
+    
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+<body>
+<!-- Nav Bar Start -->
+<div class="navbar navbar-expand-lg bg-dark navbar-dark top-row">
+    <div class="container-fluid">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link @(ViewBag.Action == "Index" && ViewBag.Controller == "Home" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-item nav-link @(ViewBag.Action == "Privacy" && ViewBag.Controller == "Home" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Who We Are</a>
+                <a class="nav-item nav-link @(ViewBag.Action == "Privacy" && ViewBag.Controller == "Home" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Contact Us</a>
+                <a class="nav-item nav-link @(ViewBag.Action == "Privacy" && ViewBag.Controller == "Home" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Events</a>
+                <a class="nav-item nav-link @(ViewBag.Action == "Privacy" && ViewBag.Controller == "Home" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Sermons</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Nav Bar End -->
+
+            @RenderBody()
+
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-contact">
+                        <h2>Our Head Office</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope"></i>info@example.com</p>
+                        <div class="footer-social">
+                            <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-link">
+                        <h2>Useful Links</h2>
+                        <a href="">About Us</a>
+                        <a href="">Contact Us</a>
+                        <a href="">Who We Are</a>
+                        <a href="">Upcoming Events</a>
+                        <a href="">Sermons</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-newsletter">
+                        <h2>Newsletter</h2>
+                        <form>
+                            <input class="form-control" placeholder="Email goes here">
+                            <button class="btn btn-custom">Submit</button>
+                            <label>Don't worry, we don't spam!</label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; @DateTime.Now.Year <a href="#">Caleb Dada Ministries</a>, All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Footer End -->
+
+<!-- Back to top button -->
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+<!-- Pre Loader -->
+<div id="loader" class="show">
+    <div class="loader"></div>
+</div>
+
+
+<!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+
+
+</body>
+</html>
